@@ -32,5 +32,49 @@ class Solution(object):
         
                     
         return sum(ints)
+        
                     
+# 14. Longest Common Prefix 
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        
+        short = min(strs, key=len)
+        prefix = ""
+        if strs == False:
+            return prefix
+         
+        if short.isalpha() == True:
+           
+            if len(strs) == 1:
+                return strs[0]
+    
+            else:
+                i = len(short)
+                while i > 0:
+                    counter = 0
+                    for word in strs:
+                        if word[:i] == short[:i]:
+                            counter += 1
+                        if counter == len(strs):
+                            return short[:i]
+                    i = i - 1
+                return prefix
+                    
+        else:
+            return prefix
+        
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          
