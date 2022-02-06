@@ -32,7 +32,7 @@ class Solution(object):
         
                     
         return sum(ints)
-        
+
                     
 # 14. Longest Common Prefix 
 class Solution(object):
@@ -66,6 +66,22 @@ class Solution(object):
                     
         else:
             return prefix
+
+
+#Leetcode #1 slow version
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+       
+        for i1, num in enumerate(nums):
+            for i2, number in enumerate(nums):
+                if i1 != i2 and num + number == target:
+                    return[i1, i2]
+                
         
             
             
