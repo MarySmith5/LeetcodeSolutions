@@ -84,7 +84,28 @@ class Solution(object):
                 
         
             
+#Leetcode #1 smokin fast version
+# 
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        i = 0
+        while i < len(nums):
+            addend = target - nums[i]
+            sub_nums = nums[i+1:]
             
+            if addend in sub_nums:
+                return[i, sub_nums.index(addend) + i + 1]
+            
+            i += 1
+            
+                
+               
             
             
             
