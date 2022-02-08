@@ -104,6 +104,24 @@ class Solution(object):
             
             i += 1
             
+
+#Leetcode 9 Palindrome Number
+
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0:
+            return False
+        
+        x_ = str(x)
+        
+        if x_[:] == x_[::-1]:
+            return True
+        else:
+            return False
                 
                
             
